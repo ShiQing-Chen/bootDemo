@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<!--namespace 路径 指向dao层接口-->
+<mapper namespace="com.example.dao.StudentDao" >
+    <resultMap id="resultMap" type="com.example.model.Student">
+        <id column="id" property="id" jdbcType="VARCHAR"></id>
+        <result column="name" property="name" jdbcType="VARCHAR"></result>
+    </resultMap>
+
+    <select id="getAll" resultMap="resultMap">
+        SELECT * FROM student
+    </select>
+
+
+</mapper>
